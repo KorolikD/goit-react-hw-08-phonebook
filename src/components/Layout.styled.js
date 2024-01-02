@@ -3,7 +3,7 @@ import { theme } from 'styles';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  max-width: 1600px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 16px;
 `;

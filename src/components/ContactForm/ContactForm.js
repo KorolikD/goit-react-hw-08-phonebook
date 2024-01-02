@@ -40,7 +40,7 @@ export const ContactForm = () => {
         if (isContactInList) {
           toast.error(`"${name}" is already in contacts`);
         } else {
-          dispatch(addContact({ name, phone }));
+          dispatch(addContact({ name, number: phone }));
         }
 
         actions.resetForm();

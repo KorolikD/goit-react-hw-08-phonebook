@@ -16,10 +16,10 @@ export const ContactsList = () => {
 
   return (
     <ListContacts>
-      {visibleContacts.map(({ id, name, phone }) => (
+      {visibleContacts.map(({ id, name, number }) => (
         <ListItem key={id}>
           <Text>
-            <BoldText>{name}</BoldText>: {phone}
+            <BoldText>{name}</BoldText>: {number}
           </Text>
           <FilterButton
             type="button"

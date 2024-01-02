@@ -10,7 +10,7 @@ import {
 } from '../redux/contacts/selectors';
 import { fetchContacts } from '../redux/contacts/operations';
 
-export const Contacts = () => {
+const Contacts = () => {
   const dispatch = useDispatch();
 
   const contacts = useSelector(selectContacts);
@@ -37,3 +37,5 @@ export const Contacts = () => {
     </>
   );
 };
+
+export default Contacts;
