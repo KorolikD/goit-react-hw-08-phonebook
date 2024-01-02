@@ -1,42 +1,22 @@
-import { GlobalStyles } from 'styles';
-import { Title, TitleH2 } from './App.styled';
-import { ContactForm, Filter, ContactsList, Loader } from 'components';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Toaster } from 'react-hot-toast';
-import {
-  selectContacts,
-  selectError,
-  selectIsLoading,
-} from '../../redux/selectors';
-import { fetchContacts } from '../../redux/operations';
+import { Route, Routes } from 'react-router-dom';
+// import { Layout } from './Layout';
+import { Contacts } from 'pages/Contacts';
+import { Home } from 'pages/Home';
+import { AppBar } from 'components/AppBar/AppBar';
+import { Register } from 'pages/Register';
+import { Login } from 'pages/Login';
 
 export const App = () => {
-  const dispatch = useDispatch();
-
-  const contacts = useSelector(selectContacts);
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   return (
-    <>
-      <Toaster position="top-right" reverseOrder={false} />
+    <div>
+      <AppBar />
 
-      <Title>Phonebook</Title>
-      <ContactForm />
-
-      <TitleH2>Contacts</TitleH2>
-      <Filter />
-
-      {(isLoading && <Loader />) || (contacts.length > 0 && <ContactsList />)}
-
-      {error && <p style={{ textAlign: 'center' }}>{error}</p>}
-
-      <GlobalStyles />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </div>
   );
 };

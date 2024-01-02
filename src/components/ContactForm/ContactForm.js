@@ -9,9 +9,9 @@ import {
   SubmitButton,
 } from './ContactForm.styled';
 import * as Yup from 'yup';
-import { selectContacts } from '../../redux/selectors';
+import { selectContacts } from '../../redux/contacts/selectors';
 import toast from 'react-hot-toast';
-import { addContact } from '../../redux/operations';
+import { addContact } from '../../redux/contacts/operations';
 
 // Валідація за допомогою Yup
 const SignupSchema = Yup.object().shape({

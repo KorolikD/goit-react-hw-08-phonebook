@@ -6,8 +6,8 @@ import {
   Text,
   BoldText,
 } from './ContactsList.styled';
-import { selectVisibleContacts } from '../../redux/selectors';
-import { deleteContact } from '../../redux/operations';
+import { selectVisibleContacts } from '../../redux/contacts/selectors';
+import { deleteContact } from '../../redux/contacts/operations';
 
 export const ContactsList = () => {
   const dispatch = useDispatch();
