@@ -15,8 +15,8 @@ import { addContact } from '../../redux/contacts/operations';
 
 // Валідація за допомогою Yup
 const SignupSchema = Yup.object().shape({
-  name: Yup.string().required('Required'),
-  phone: Yup.string().required('Required'),
+  name: Yup.string().required('Name is required'),
+  phone: Yup.string().required('Number is required'),
 });
 
 export const ContactForm = () => {
@@ -48,13 +48,12 @@ export const ContactForm = () => {
     >
       <Form>
         <FormGroup>
-          Name
-          <Field type="text" name="name"></Field>
+          <Field type="text" name="name" placeholder="Name"></Field>
           <ErrorMessage name="name" component={'span'} />
         </FormGroup>
+
         <FormGroup>
-          Number
-          <Field type="number" name="phone"></Field>
+          <Field type="number" name="phone" placeholder="Number"></Field>
           <ErrorMessage name="phone" component={'span'} />
         </FormGroup>
 

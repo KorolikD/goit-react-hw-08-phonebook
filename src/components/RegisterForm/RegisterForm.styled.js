@@ -1,8 +1,4 @@
-import {
-  Form as FormikForm,
-  Field as FormikField,
-  ErrorMessage as FormikError,
-} from 'formik';
+import { Form as FormikForm, Field as FormikField } from 'formik';
 import styled from 'styled-components';
 import { theme } from 'styles';
 
@@ -10,7 +6,7 @@ export const Form = styled(FormikForm)`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 `;
 
 export const Field = styled(FormikField)`
@@ -26,15 +22,10 @@ export const Field = styled(FormikField)`
 `;
 
 export const FormGroup = styled.label`
-  position: relative;
-`;
-
-export const ErrorMessage = styled(FormikError)`
-  position: absolute;
-  top: 105%;
-  left: 0;
-  color: ${theme.colors.red};
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
+  gap: 4px;
 `;
 
 export const SubmitButton = styled.button`

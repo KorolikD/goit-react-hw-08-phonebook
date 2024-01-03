@@ -1,27 +1,19 @@
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
-};
+import photo from '../components/phonebook.png';
+import { Image, Text, Title, Wrapper } from './Home.styled';
 
 const Home = () => {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>
-        PhoneBook manager welcome page{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
+    <>
+      <Title>Welcome to contacts management platform!</Title>
+      <Wrapper>
+        <Text>
+          We're delighted to have you here. This is your space to effortlessly
+          save and organize your contacts. Please register or sign in to start
+          using the application. Enjoy!
+        </Text>
+        <Image src={photo} alt="phone book" />
+      </Wrapper>
+    </>
   );
 };
 

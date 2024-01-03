@@ -1,8 +1,7 @@
-import { Title, TitleH2 } from './Contacts.styled';
+import { HorizontalLine, Title, TitleH2 } from './Contacts.styled';
 import { ContactForm, Filter, ContactsList, Loader } from 'components';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Toaster } from 'react-hot-toast';
 import {
   selectContacts,
   selectError,
@@ -23,10 +22,10 @@ const Contacts = () => {
 
   return (
     <>
-      <Toaster position="top-right" reverseOrder={false} />
-
-      <Title>Phonebook</Title>
+      <Title>Add new contacts</Title>
       <ContactForm />
+
+      <HorizontalLine />
 
       <TitleH2>Contacts</TitleH2>
       <Filter />

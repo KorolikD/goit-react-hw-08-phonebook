@@ -1,18 +1,20 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/operations';
-import css from './UserMenu.module.css';
 import { useAuth } from 'hoocs';
+import { Button, Username, Wrapper } from './UserMenu.styled';
+import { FaUserCircle } from 'react-icons/fa';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
 
   return (
-    <div className={css.wrapper}>
-      <p className={css.username}> {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
+    <Wrapper>
+      <FaUserCircle style={{ width: 20, height: 20 }} />
+      <Username> {user.name}</Username>
+      <Button type="button" onClick={() => dispatch(logOut())}>
         Logout
-      </button>
-    </div>
+      </Button>
+    </Wrapper>
   );
 };

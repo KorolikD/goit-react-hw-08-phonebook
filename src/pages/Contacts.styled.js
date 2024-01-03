@@ -1,25 +1,28 @@
 import styled from 'styled-components';
+import { theme } from 'styles';
 
-export const Title = styled.h1`
-  margin-top: ${p => p.theme.spacing(5)};
-  margin-bottom: ${p => p.theme.spacing(5)};
+export const Title = styled.p`
+  margin-bottom: ${theme.spacing(5)};
 
-  font-weight: 700;
-  font-size: 36px;
+  font-weight: 500;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
 
-  color: ${p => p.theme.colors.dark};
+  color: ${theme.colors.dark};
 `;
 
-export const TitleH2 = styled.h1`
-  margin-top: ${p => p.theme.spacing(6)};
-  margin-bottom: ${p => p.theme.spacing(5)};
+export const HorizontalLine = styled.hr`
+  margin: 32px;
+`;
 
-  font-weight: 700;
-  font-size: 36px;
+export const TitleH2 = styled.p`
+  margin-bottom: ${theme.spacing(5)};
+
+  font-weight: 500;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
 
-  color: ${p => p.theme.colors.dark};
+  color: ${theme.colors.dark};
 `;

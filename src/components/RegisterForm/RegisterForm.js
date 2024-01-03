@@ -1,12 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { registration } from '../../redux/auth/operations';
 
-import {
-  Field,
-  Form,
-  FormGroup,
-  SubmitButton,
-} from 'components/ContactForm/ContactForm.styled';
+import { Field, Form, FormGroup, SubmitButton } from './RegisterForm.styled';
 import { Formik } from 'formik';
 
 export const RegisterForm = () => {
@@ -34,42 +29,21 @@ export const RegisterForm = () => {
       <Form>
         <FormGroup htmlFor="userName">
           User Name:
-          <Field id="userName" name="userName" placeholder="John" />
+          <Field name="userName" placeholder="Adrian Cross" />
         </FormGroup>
+
         <FormGroup htmlFor="email">
           Email:
-          <Field id="email" name="email" placeholder="jane@smile.com" />
+          <Field name="email" placeholder="across@mail.com" type="email" />
         </FormGroup>
 
         <FormGroup htmlFor="password">
           Password:
-          <Field
-            id="password"
-            name="password"
-            placeholder="password"
-            type="password"
-          />
+          <Field name="password" placeholder="example12345" type="password" />
         </FormGroup>
-        <SubmitButton type="submit">Register</SubmitButton>
+
+        <SubmitButton type="submit">Sign up</SubmitButton>
       </Form>
     </Formik>
   );
-
-  // return (
-  //   <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-  //     <label className={css.label}>
-  //       Username
-  //       <input type="text" name="name" placeholder="Adrian Cross" />
-  //     </label>
-  //     <label className={css.label}>
-  //       Email
-  //       <input type="email" name="email" placeholder="across@mail.com" />
-  //     </label>
-  //     <label className={css.label}>
-  //       Password
-  //       <input type="password" name="password" placeholder="examplepwd12345" />
-  //     </label>
-  //     <button type="submit">Register</button>
-  //   </form>
-  // );
 };

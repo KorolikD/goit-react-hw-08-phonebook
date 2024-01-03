@@ -10,11 +10,11 @@ export const Filter = () => {
 
   return (
     <Label>
-      Find contact by name
       <FilterInput
         type="text"
         name="filter"
         value={filter}
+        placeholder="Find contact by name"
         onChange={evt => dispatch(updateFilter(evt.target.value))}
       />
     </Label>
