@@ -21,6 +21,7 @@ export const Text = styled.p`
 `;
 
 export const Image = styled.img`
-  display: block;
-  width: 340px;
+  display: inline-block;
+  min-width: 100px;
+  height: auto;
 `;
