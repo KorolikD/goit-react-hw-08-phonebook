@@ -13,7 +13,7 @@ export const ListContacts = styled.ul`
 export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 360px;
   height: 24px;
   text-align: center;
   gap: 18px;
