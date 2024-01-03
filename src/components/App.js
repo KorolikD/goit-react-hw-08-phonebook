@@ -3,10 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { refreshUser } from '../redux/auth/operations';
 import { lazy, useEffect } from 'react';
-import { useAuth } from '../redux/auth/selectors';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { Loader } from './Loader/Loader';
+import { useAuth } from 'hoocs';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));

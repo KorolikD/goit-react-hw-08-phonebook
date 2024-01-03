@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import css from './RegisterForm.module.css';
 import { registration } from '../../redux/auth/operations';
 
 import {

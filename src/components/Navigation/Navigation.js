@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import css from './Navigation.module.css';
-import { useAuth } from '../../redux/auth/selectors';
-import { UserMenu } from 'components/UserMenu/UserMenu';
+import { useAuth } from 'hoocs';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();

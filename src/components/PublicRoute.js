@@ -1,5 +1,5 @@
+import { useAuth } from 'hoocs';
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../redux/auth/selectors';
 
 export const PublicRoute = ({ component: Component, redirectTo = '/' }) => {
   const { isLoggedIn } = useAuth();
